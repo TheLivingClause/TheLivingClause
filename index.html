@@ -5,55 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Living Clause</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap');
+  /* Make html and body full height and width */
+  html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(135deg, #1e2a47, #3b1f0b);
-  color: #f0e6d2;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+  /* Body as flex container filling viewport */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    background: linear-gradient(135deg, #1e2a47, #3b1f0b);
+    color: #f0e6d2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+  }
 
-.container {
-  display: flex;
-  width: 90vw;       /* Use 90% of viewport width */
-  max-width: 1200px; /* Max width limit */
-  min-height: 70vh;  /* Min height limit */
-  background: rgba(255, 179, 71, 0.1);
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-  overflow: hidden;
-}
+  /* Container fills full viewport */
+  .container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 12px;
+    background: rgba(255, 179, 71, 0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
 
-.sidebar {
-  flex: 0 1 80px; /* Flex-grow: 0, Flex-shrink: 1, Base width: 80px */
-  background: rgba(255, 179, 71, 0.05);
-  color: rgba(255, 179, 71, 0.3);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.75rem;
-  padding: 1rem 0.5rem;
-  user-select: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.2;
-  min-width: 60px;  /* Minimum width */
-  max-width: 120px; /* Maximum width */
-}
+  /* Sidebars with fixed widths */
+  .sidebar {
+    flex: 0 0 80px;
+    background: rgba(255, 179, 71, 0.05);
+    color: rgba(255, 179, 71, 0.3);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    padding: 1rem 0.5rem;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+  }
 
-.content {
-  flex: 1 1 auto;   /* Flexible to take all remaining space */
-  padding: 2rem 3rem;
-  min-width: 280px; /* Prevent content from becoming too narrow */
-}
-
+  /* Content takes remaining space */
+  .content {
+    flex: 1 1 auto;
+    padding: 2rem 3rem;
+    min-width: 280px;
+    overflow-y: auto;
+  }
 
   header h1 {
     font-weight: 700;
@@ -89,18 +95,6 @@ html, body {
 
   a:hover {
     text-decoration: underline;
-  }
-
-  /* Fade in animation */
-  body {
-    animation: fadeIn 1.2s ease forwards;
-    opacity: 0;
-  }
-
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
   }
 </style>
 </head>
