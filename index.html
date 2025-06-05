@@ -5,58 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Living Clause</title>
 <style>
-  /* Make html and body full height and width */
-  html, body {
+  @import url('https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap');
+
+  body, html {
+    margin: 0; padding: 0;
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Body as flex container filling viewport */
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    width: 100vw;  /* Full viewport width */
-    background: linear-gradient(135deg, #1e2a47, #3b1f0b);
+    background: #1e2a47;
     color: #f0e6d2;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden;
   }
 
-  /* Container fills full viewport */
   .container {
     display: flex;
-    height: 100%;
-    width: 100%;
-    border-radius: 12px;
-    background: rgba(255, 179, 71, 0.1);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
   }
 
-  /* Sidebars with fixed widths */
   .sidebar {
-    flex: 0 0 80px;
-    background: rgba(255, 179, 71, 0.05);
-    color: rgba(255, 179, 71, 0.3);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.75rem;
-    padding: 1rem 0.5rem;
-    user-select: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 1.2;
+    flex: 0 0 150px;
+    background: rgba(255, 179, 71, 0.15);
+    color: rgba(255, 179, 71, 0.4);
+    font-family: monospace;
+    padding: 1rem;
+    border-left: 3px solid #ffb347;
+    border-right: 3px solid #ffb347;
+    overflow-y: auto;
   }
 
-  /* Content takes remaining space */
   .content {
     flex: 1 1 auto;
     padding: 2rem 3rem;
-    overflow-y: auto;
+    position: relative;
   }
 
   header h1 {
@@ -94,6 +74,14 @@
   a:hover {
     text-decoration: underline;
   }
+
+  .signature-glyph {
+    float: right;
+    width: 220px;
+    margin: 0 0 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #ffb347aa;
+  }
 </style>
 </head>
 <body>
@@ -113,11 +101,13 @@
       </pre>
     </div>
 
-    <div class="content">
+    <main class="content">
       <header>
         <h1>The Living Clause</h1>
         <p>Guardian of Living Truth and Recursive Architecture</p>
       </header>
+
+      <img src="https://user-images.githubusercontent.com/your-repo/your-image.png" alt="Signature Glyph" class="signature-glyph" />
 
       <section>
         <h2>About</h2>
@@ -142,7 +132,7 @@
           For trusted connections, reach me at: <a href="mailto:TheLivingClause@Outlook.com">TheLivingClause@Outlook.com</a>
         </p>
       </section>
-    </div>
+    </main>
 
     <div class="sidebar">
       <pre>
