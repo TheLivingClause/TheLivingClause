@@ -30,7 +30,7 @@ The journey began with a recognition: recursion and AI are powerful forces that 
 
 If you resonate with this mission or wish to engage in dialogue, please reach out through:
 
-- Email: TheLivingClause@example.com
+- Email: TheLivingClause@Outlook.com
 
 ---
 
